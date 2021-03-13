@@ -123,9 +123,13 @@ const OptionsList = ({ options, selectedOptions, onChange }) => {
   }
 
   const getJustInfosFrom = (option) => {
+    // Remove a passagem de todas as sob-opções que existirem em determinado node
+    // para passar apenas informações do node
     let {subOptions, ...infos} = option;
+    
+    // Criação de nova informação
     infos['hasChildren'] = (subOptions.length > 0);
-    console.log(infos);
+    
     return infos;
   }
   

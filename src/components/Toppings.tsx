@@ -86,7 +86,8 @@ export class Toppings extends React.Component {
   render() {
     return (
       <div className={styles.orgTree}>
-        <h1>Toppings</h1>
+        <h1>Epro In Cascade</h1>
+        <h4><i>Created by: <b>TAC</b></i></h4>
         <br/>
         <OptionsList 
           options={eproJsonOptions} 

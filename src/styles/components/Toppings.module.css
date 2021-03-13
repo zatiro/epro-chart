@@ -1,5 +1,7 @@
 .orgTree {
-  width: 100%;
+  min-width: 100vw;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 .orgTree ul {
@@ -8,6 +10,7 @@
   padding: 0;
   margin: 0 5px;
 }
+
 .orgTree li {
   justify-content: center;
   justify-items: center;

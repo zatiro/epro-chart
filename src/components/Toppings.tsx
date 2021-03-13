@@ -6,7 +6,7 @@ import { BsBoxArrowDown, BsBoxArrowUp } from 'react-icons/bs'
 import styles from '../styles/components/Toppings.module.css';
 import eproJson from '../epro.json';
 
-const eproJsonOptions = [eproJson];
+const eproJsonOptions = eproJson;
 
 const toppingOptions = [
   {
@@ -85,16 +85,18 @@ export class Toppings extends React.Component {
 
   render() {
     return (
-      <div className={styles.orgTree}>
+      <>
         <h1>Epro In Cascade</h1>
         <h4><i>Created by: <b>TAC</b></i></h4>
-        <br/>
-        <OptionsList 
-          options={eproJsonOptions} 
-          onChange={(selectedOptions) => this.setState({selectedOptions})}
-          selectedOptions={this.state.selectedOptions} 
-        />
-      </div>
+        <div className={styles.orgTree}>
+          <OptionsList 
+            options={eproJsonOptions} 
+            onChange={(selectedOptions) => this.setState({selectedOptions})}
+            selectedOptions={this.state.selectedOptions} 
+          />
+        </div>
+      </>
+      
     )
   }
   

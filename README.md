@@ -1,3 +1,14 @@
+## References
+[Css and recursive list](https://naveenda.medium.com/how-to-make-the-employee-hierarchy-chart-using-react-d48c7ca440c3)
+Extremely usefull to recursive funtionality [Toppings](https://www.bitovi.com/blog/recursive-react-components#:~:text=Recursion%20in%20React,essentially%20functions%20which%20return%20JSX.&text=Here%2C%20the%20recursive%20call%20is,of%20the%20props%20it%20received.)
+I couldn't make it through, but it's nice to mention: [react-organizational-chart](https://github.com/daniel-hauser/react-organizational-chart)
+
+## Packeges used
+(react-icons)[https://github.com/react-icons/react-icons]
+(react-bootstrap)[https://react-bootstrap.netlify.app/getting-started/introduction]
+
+-------------------------------------------------------------------------------------
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started

@@ -14,3 +14,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+:root {
+  --org-tree-line-color: #333;
+}

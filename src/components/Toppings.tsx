@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Card, Button} from 'react-bootstrap';
+import { Card, Button, Dropdown } from 'react-bootstrap';
+
 import { BsBoxArrowDown, BsBoxArrowUp } from 'react-icons/bs'
 
 import styles from '../styles/components/Toppings.module.css';
@@ -88,6 +89,19 @@ export class Toppings extends React.Component {
       <>
         <h1>Epro In Cascade</h1>
         <h4><i>Created by: <b>TAC</b></i></h4>
+
+        <Dropdown>
+          <Dropdown.Toggle size="sm" variant="outline-secondary" id="dropdown-properties">
+            Propriedades
+          </Dropdown.Toggle>
+
+          <Dropdown.Menu rootCloseEvent='mousedown'>
+            <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+            <Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+            <Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+
         <div className={styles.orgTree}>
           <OptionsList 
             options={eproJsonOptions} 
@@ -140,7 +154,7 @@ const OptionsList = ({ options, selectedOptions, onChange }) => {
     <ul>
       {options.map(option => (
         <>
-          <li>
+          <li key={option.id}>
             <CardNode 
               selected={selectedOptions[option.id]} 
               infos={ getJustInfosFrom(option) } 
@@ -194,8 +208,8 @@ const CardNode = ({ selected, infos, onChange }) => {
           { infos.hasChildren && (
             <div className={styles.cardCheckboxContainer}>
               <Button 
-                variant="light"
                 size="sm"
+                variant="light"
                 block
                 onClick={() => {
                   onChange(!selected);
